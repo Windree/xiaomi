@@ -1,6 +1,6 @@
 # Remove bloatware from Redmi Note 10 Pro (sweet) EEA firmware
 
-[Firmware](https://xiaomifirmwareupdater.com/miui/sweet/stable/V14.0.9.0.TKFEUXM/)
+[Firmware](https://xiaomifirmwareupdater.com/miui/ruby/)
 
 ```
 adb shell pm disable-user --user 0 com.google.android.gm
