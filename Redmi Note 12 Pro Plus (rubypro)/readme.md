@@ -1,4 +1,4 @@
-# Remove bloatware from Redmi Note 10 Pro (sweet) EEA firmware
+# Remove bloatware from Redmi Note 12 Pro Plus (rubypro) Global firmware
 
 [Firmware](https://xiaomifirmwareupdater.com/miui/ruby/)
 
