@@ -13,7 +13,6 @@ adb shell pm disable-user --user 0 com.xiaomi.mipicks
 adb shell pm disable-user --user 0 com.miui.videoplayer
 adb shell pm disable-user --user 0 com.miui.player
 adb shell pm disable-user --user 0 com.google.android.apps.safetyhub
-adb shell pm disable-user --user 0 com.miui.service
 adb shell pm disable-user --user 0 com.miui.miservice
 adb shell pm disable-user --user 0 com.miui.weather2
 adb shell pm disable-user --user 0 com.google.android.youtube
