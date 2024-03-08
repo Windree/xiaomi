@@ -17,4 +17,5 @@ adb shell pm disable-user --user 0 com.miui.miservice
 adb shell pm disable-user --user 0 com.miui.weather2
 adb shell pm disable-user --user 0 com.google.android.apps.photos
 adb shell pm disable-user --user 0 com.google.android.youtube
+adb shell pm disable-user --user 0 com.mi.globalminusscreen
 ```
