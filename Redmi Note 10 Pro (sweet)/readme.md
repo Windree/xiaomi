@@ -2,20 +2,6 @@
 
 [Firmware](https://xiaomifirmwareupdater.com/miui/sweet/stable/V14.0.9.0.TKFEUXM/)
 
-```
-adb shell pm disable-user --user 0 com.google.android.gm
-adb shell pm disable-user --user 0 com.google.android.apps.subscriptions.red
-adb shell pm disable-user --user 0 com.google.android.apps.googleassistant
-adb shell pm disable-user --user 0 com.android.chrome
-adb shell pm disable-user --user 0 com.xiaomi.glgm
-adb shell pm disable-user --user 0 com.google.android.apps.maps
-adb shell pm disable-user --user 0 com.xiaomi.mipicks
-adb shell pm disable-user --user 0 com.miui.videoplayer
-adb shell pm disable-user --user 0 com.miui.player
-adb shell pm disable-user --user 0 com.google.android.apps.safetyhub
-adb shell pm disable-user --user 0 com.miui.miservice
-adb shell pm disable-user --user 0 com.miui.weather2
-adb shell pm disable-user --user 0 com.google.android.apps.photos
-adb shell pm disable-user --user 0 com.google.android.youtube
-adb shell pm disable-user --user 0 com.mi.globalminusscreen
+```powershell
+"com.android.chrome com.facebook.appmanager com.facebook.services com.facebook.system com.google.android.adservices.api com.google.android.apps.googleassistant com.google.android.apps.maps com.google.android.apps.safetyhub com.google.android.apps.subscriptions.red com.google.android.apps.turbo com.google.android.apps.wellbeing com.google.android.gm com.google.android.projection.gearhead com.google.android.youtube com.google.mainline.adservices com.google.mainline.telemetry com.mi.globalminusscreen com.miui.android.fashiongallery com.miui.bugreport com.miui.calculator com.miui.cleaner com.miui.cloudbackup com.miui.cloudservice com.miui.compass com.miui.face com.miui.gallery com.miui.micloudsync com.miui.miservice com.miui.misound com.miui.miwallpaper com.miui.miwallpaper.overlay com.miui.miwallpaper.overlay.customize com.miui.msa.global com.miui.notes com.miui.phrase com.miui.player com.miui.qr com.miui.systemui.carriers.overlay com.miui.touchassistant com.miui.videoplayer com.miui.weather2 com.miui.yellowpage com.xiaomi.cameratools com.xiaomi.glgm com.xiaomi.joyose com.xiaomi.mipicks" -split " " | %{ Write-Host "Package:" $_; Write-Host "Uninstall updates..."; &adb uninstall $_ Write-Host " Disable package..."; &adb shell pm disable-user --user 0 $_; Write-Host "Uninstall package...";  &adb shell pm uninstall --user 0 $_; Write-Host }
 ```
