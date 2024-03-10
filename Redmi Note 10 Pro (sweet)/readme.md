@@ -23,7 +23,6 @@ Run following in powershell
 "com.google.mainline.adservices",
 "com.google.mainline.telemetry",
 "com.mi.globalminusscreen",
-"com.miui.android.fashiongallery",
 "com.miui.bugreport",
 "com.miui.calculator",
 "com.miui.cleaner",
@@ -35,9 +34,6 @@ Run following in powershell
 "com.miui.micloudsync",
 "com.miui.miservice",
 "com.miui.misound",
-"com.miui.miwallpaper",
-"com.miui.miwallpaper.overlay",
-"com.miui.miwallpaper.overlay.customize",
 "com.miui.msa.global",
 "com.miui.notes",
 "com.miui.phrase",
@@ -53,13 +49,8 @@ Run following in powershell
 "com.xiaomi.joyose",
 "com.xiaomi.mipicks" | %{
 	Write-Host "Package:" $_
-	Write-Host "Uninstall updates..."
-	&adb uninstall $_
-	Write-Host "Disable package..."
-	&adb shell pm disable-user --user 0 $_
 	Write-Host "Uninstall package..."
 	&adb shell pm uninstall --user 0 $_
 	Write-Host
 }
-
 ```
