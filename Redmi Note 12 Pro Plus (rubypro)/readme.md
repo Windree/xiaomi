@@ -2,20 +2,30 @@
 
 [Firmware](https://xiaomifirmwareupdater.com/miui/ruby/)
 
-```
-adb shell pm disable-user --user 0 com.google.android.gm
-adb shell pm disable-user --user 0 com.android.chrome
-adb shell pm disable-user --user 0 com.xiaomi.glgm
-adb shell pm disable-user --user 0 com.google.android.apps.maps
-adb shell pm disable-user --user 0 com.xiaomi.mipicks
-adb shell pm disable-user --user 0 com.miui.videoplayer
-adb shell pm disable-user --user 0 com.miui.player
-adb shell pm disable-user --user 0 com.miui.miservice
-adb shell pm disable-user --user 0 com.miui.weather2
-adb shell pm disable-user --user 0 com.xiaomi.mipicks
-adb shell pm disable-user --user 0 com.mi.globalbrowser
-adb shell pm disable-user --user 0 com.google.android.apps.photos
-adb shell pm disable-user --user 0 com.google.android.youtube
-adb shell pm disable-user --user 0 com.mi.globalminusscreen
-adb shell pm disable-user --user 0 com.google.android.apps.safetyhub
+patse and run fillowing code in powershell
+
+```pwsh
+"com.android.chrome",
+"com.facebook.appmanager",
+"com.facebook.services",
+"com.facebook.system"
+"com.google.android.apps.maps",
+"com.google.android.apps.photos",
+"com.google.android.apps.safetyhub",
+"com.google.android.gm",
+"com.google.android.youtube",
+"com.mi.globalbrowser",
+"com.mi.globalminusscreen",
+"com.miui.miservice",
+"com.miui.player",
+"com.miui.videoplayer",
+"com.miui.weather2",
+"com.xiaomi.glgm",
+"com.xiaomi.mipicks",
+"com.xiaomi.mipicks" | %{
+	Write-Host "Package:" $_
+	Write-Host "Uninstall package..."
+	&adb shell pm uninstall --user 0 $_
+	Write-Host
+}
 ```
