@@ -10,20 +10,23 @@ patse and run fillowing code in powershell
 "com.facebook.appmanager",
 "com.facebook.services",
 "com.facebook.system",
+"com.google.android.adservices.api",
 "com.google.android.apps.maps",
 "com.google.android.apps.photos",
 "com.google.android.apps.safetyhub",
+"com.google.android.apps.subscriptions.red",
 "com.google.android.gm",
 "com.google.android.youtube",
 "com.mi.globalbrowser",
 "com.mi.globalminusscreen",
 "com.miui.miservice",
+"com.miui.msa.global",
 "com.miui.player",
 "com.miui.videoplayer",
 "com.miui.weather2",
+"com.xiaomi.discover",
 "com.xiaomi.glgm",
-"com.xiaomi.mipicks",
-"com.google.android.apps.subscriptions.red" | %{
+"com.xiaomi.mipicks" | %{
 	Write-Host "Package:" $_
 	Write-Host "Uninstall package..."
 	&adb shell pm uninstall --user 0 $_
