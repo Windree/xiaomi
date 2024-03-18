@@ -5,10 +5,11 @@
 patse and run fillowing code in powershell
 
 ```pwsh
+`
 "com.android.chrome",
 "com.facebook.appmanager",
 "com.facebook.services",
-"com.facebook.system"
+"com.facebook.system",
 "com.google.android.apps.maps",
 "com.google.android.apps.photos",
 "com.google.android.apps.safetyhub",
@@ -22,7 +23,27 @@ patse and run fillowing code in powershell
 "com.miui.weather2",
 "com.xiaomi.glgm",
 "com.xiaomi.mipicks",
-"com.xiaomi.mipicks" | %{
+"com.google.android.apps.subscriptions.red" | %{
+	Write-Host "Package:" $_
+	Write-Host "Uninstall package..."
+	&adb shell pm uninstall --user 0 $_
+	Write-Host
+}
+```
+
+Remove additional packages
+
+```pwsh
+`
+"com.miui.cleaner",
+"com.miui.calculator",
+"com.xiaomi.payment",
+"com.miui.notes",
+"com.miui.cloudservice",
+"com.miui.yellowpage",
+"com.xiaomi.joyose",
+"com.tencent.soter.soterserver",
+"com.miui.cloudbackup" | %{
 	Write-Host "Package:" $_
 	Write-Host "Uninstall package..."
 	&adb shell pm uninstall --user 0 $_
