@@ -50,3 +50,22 @@ Remove additional packages
 	Write-Host
 }
 ```
+
+
+Remove SMS/MMS messngers to replace with FOSS [SMS Messanger](https://f-droid.org/en/packages/com.simplemobiletools.smsmessenger/)
+
+```pwsh
+`
+"com.android.mms",
+"com.google.android.apps.messaging" | %{
+	Write-Host "Package:" $_
+	Write-Host "Uninstall package..."
+	&adb shell pm uninstall --user 0 $_
+	Write-Host
+}
+```
+
+
+
+
+
