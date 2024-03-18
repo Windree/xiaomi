@@ -90,3 +90,15 @@ Remove Callendar to replace with FOSS [Calendar Pro](https://f-droid.org/en/pack
 	Write-Host
 }
 ```
+
+Remove Contacts to replace with FOSS [Contacts Pro](https://f-droid.org/en/packages/com.simplemobiletools.contacts.pro/)
+
+```pwsh
+`
+"com.google.android.contacts" | %{
+	Write-Host "Package:" $_
+	Write-Host "Uninstall package..."
+	&adb shell pm uninstall --user 0 $_
+	Write-Host
+}
+```
