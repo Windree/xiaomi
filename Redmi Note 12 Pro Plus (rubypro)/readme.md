@@ -78,3 +78,15 @@ Remove Dialer/Phone to replace with FOSS [Dialler](https://f-droid.org/en/packag
 	Write-Host
 }
 ```
+
+Remove Callendar to replace with FOSS [Calendar Pro](https://f-droid.org/en/packages/com.simplemobiletools.calendar.pro/)
+
+```pwsh
+`
+"com.google.android.calendar" | %{
+	Write-Host "Package:" $_
+	Write-Host "Uninstall package..."
+	&adb shell pm uninstall --user 0 $_
+	Write-Host
+}
+```
