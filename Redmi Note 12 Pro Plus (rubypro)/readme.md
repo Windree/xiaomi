@@ -54,7 +54,7 @@ Remove additional packages
 }
 ```
 
-Remove SMS/MMS messngers to replace with FOSS [SMS Messanger](https://f-droid.org/en/packages/com.simplemobiletools.smsmessenger/)
+Remove SMS/MMS messanger to replace with FOSS [SMS Messanger](https://f-droid.org/en/packages/com.simplemobiletools.smsmessenger/)
 
 ```pwsh
 `
@@ -67,7 +67,7 @@ Remove SMS/MMS messngers to replace with FOSS [SMS Messanger](https://f-droid.or
 }
 ```
 
-Remove SMS/MMS messngers to replace with FOSS [SMS Messanger](https://f-droid.org/en/packages/com.simplemobiletools.smsmessenger/)
+Remove Dialer/Phone to replace with FOSS [Dialler](https://f-droid.org/en/packages/com.simplemobiletools.dialer/)
 
 ```pwsh
 `
